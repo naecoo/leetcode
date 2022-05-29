@@ -1,7 +1,7 @@
 /**
  * 题目链接：
  * https://leetcode.cn/problems/remove-outermost-parentheses/
- * 
+ *
  * @param {string} s
  * @return {string}
  */
