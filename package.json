@@ -1,0 +1,20 @@
+{
+  "name": "leetcode",
+  "version": "1.0.0",
+  "description": "leetcode problems",
+  "private": true,
+  "scripts": {
+    "new": "node ./scripts/new.js",
+    "commit": "node ./scripts/commit.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naecoo/leetcode.git"
+  },
+  "author": "ocean7hy@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naecoo/leetcode/issues"
+  },
+  "homepage": "https://github.com/naecoo/leetcode#readme"
+}
