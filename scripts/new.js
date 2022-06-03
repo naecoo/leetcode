@@ -1,5 +1,5 @@
-const { resolve } = require('path');
-const { mkdir } = require('fs');
+const { resolve, basename } = require('path');
+const { mkdir, writeFile } = require('fs');
 
 const zero = (n) => n > 9 ? n : `0${n}`;
 const date = new Date();
@@ -9,3 +9,18 @@ mkdir(resolve(__dirname, '../', dirName), (err) => {
     console.log('文件夹已经存在');
   }
 });
+
+const args = process.argv.slice(2);
+if (args.length > 0) {
+  const jsFile = `${basename(args[0])}.js`
+  const content = `/**
+ * 题目链接：
+ *
+ *
+ */`
+  writeFile(resolve(__dirname, '../', dirName, './', jsFile), content, (err) => {
+    if (err) {
+      console.log(`${jsFile} 文件已经存在`);
+    }
+  });
+}
