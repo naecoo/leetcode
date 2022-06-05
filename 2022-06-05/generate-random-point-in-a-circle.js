@@ -22,8 +22,8 @@ Solution.prototype.randPoint = function () {
     }
   }
 };
-
-Solution.prototype.randPoint = function () {
+// 更好的随机算法，需要对概率论，期望分布有一定了解
+Solution.prototype.randPoint2 = function () {
   const u = Math.random();
   const theta = Math.random() * 2 * Math.PI;
   const r = Math.sqrt(u);
