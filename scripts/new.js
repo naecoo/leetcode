@@ -15,7 +15,7 @@ if (args.length > 0) {
   const jsFile = `${basename(args[0])}.js`
   const content = `/**
  * 题目链接：
- *
+ * https://leetcode.cn/problems/${basename(args[0])}/
  *
  */`
   writeFile(resolve(__dirname, '../', dirName, './', jsFile), content, (err) => {
