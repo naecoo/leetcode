@@ -5,7 +5,9 @@
   "private": true,
   "scripts": {
     "new": "node ./scripts/new.js",
-    "commit": "node ./scripts/commit.js"
+    "commit": "node ./scripts/commit.js",
+    "format": "prettier --write ./**/*.js",
+    "lint": "eslint --ext .ts,.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,26 @@
   "bugs": {
     "url": "https://github.com/naecoo/leetcode/issues"
   },
-  "homepage": "https://github.com/naecoo/leetcode#readme"
+  "homepage": "https://github.com/naecoo/leetcode#readme",
+  "devDependencies": {
+    "eslint": "^8.17.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "lint-staged": "^13.0.2",
+    "prettier": "^2.7.1",
+    "yorkie": "^2.0.0"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "prettier --write",
+      "eslint"
+    ]
+  }
 }

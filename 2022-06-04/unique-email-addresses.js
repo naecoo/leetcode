@@ -20,4 +20,4 @@ function numUniqueEmails(emails) {
     set.add(s + '@' + domain);
   });
   return set.size;
-};
+}

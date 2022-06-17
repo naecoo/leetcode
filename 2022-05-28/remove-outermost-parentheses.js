@@ -14,7 +14,7 @@ function removeOuterParentheses(s) {
     if (c === '(') stack++;
   }
   return res;
-};
+}
 
 // 第二种解法
 function removeOuterParentheses1(s) {
@@ -34,4 +34,4 @@ function removeOuterParentheses1(s) {
     }
   }
   return res;
-};
+}

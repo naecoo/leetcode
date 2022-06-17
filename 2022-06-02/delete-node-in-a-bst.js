@@ -41,4 +41,4 @@ function deleteNode(root, key) {
     root.right = deleteNode(root.right, key);
     return root;
   }
-};
+}

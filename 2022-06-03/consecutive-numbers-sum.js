@@ -24,8 +24,8 @@ function consecutiveNumbersSum1(n) {
   let start = 1;
   for (let i = 1; i <= n; i++) {
     sum += i;
-    while (sum > n) sum -= start++
+    while (sum > n) sum -= start++;
     if (sum === n) ans++;
   }
   return ans;
-};
+}

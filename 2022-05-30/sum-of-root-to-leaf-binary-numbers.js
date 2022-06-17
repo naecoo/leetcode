@@ -19,14 +19,15 @@ function sumRootToLeaf(root) {
     val = (val << 1) | node.val;
     if (!node.left && !node.right) return val;
     return dfs(node.left, val) + dfs(node.right, val);
-  }
+  };
   return dfs(root, 0);
-};
+}
 
 // 迭代
 function sumRootToLeaf1(root) {
   const stack = [];
-  let val = 0, ret = 0;
+  let val = 0,
+    ret = 0;
   let prev = null;
   while (root || stack.length) {
     while (root) {
@@ -67,4 +68,4 @@ function sumRootToLeaf2(root) {
     }
     paths.pop();
   }
-};
+}

@@ -7,7 +7,7 @@
  */
 function heightChecker(heights) {
   const expected = new Array(Math.max(...heights) + 1).fill(0);
-  heights.forEach(height => {
+  heights.forEach((height) => {
     expected[height]++;
   });
   let diff = 0;
@@ -20,4 +20,4 @@ function heightChecker(heights) {
     }
   });
   return diff;
-};
+}

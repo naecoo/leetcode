@@ -10,7 +10,7 @@ function Solution(radius, x_center, y_center) {
   this.xc = x_center;
   this.yc = y_center;
   this.r = radius;
-};
+}
 
 Solution.prototype.randPoint = function () {
   // 在一个正方形中采样

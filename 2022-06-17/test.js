@@ -19,6 +19,3 @@ function add(num1, num2) {
   }
   return res.reverse().join('');
 }
-console.log(
-  add(123, 7700)
-)

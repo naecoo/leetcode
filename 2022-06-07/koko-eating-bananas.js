@@ -14,9 +14,10 @@ function minEatingSpeed(piles, h) {
       times += Math.ceil(piles[i] / k);
     }
     return times <= h;
-  }
+  };
 
-  let lo = 0, hi = 10e9;
+  let lo = 0,
+    hi = 10e9;
   while (lo < hi) {
     const mid = lo + Math.floor((hi - lo) / 2);
     if (possible(mid)) {
@@ -26,4 +27,4 @@ function minEatingSpeed(piles, h) {
     }
   }
   return lo;
-};
+}

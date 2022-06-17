@@ -15,7 +15,7 @@ function validIPAddress(queryIP) {
   }
 
   return 'Neither';
-};
+}
 const IPv4RE = /^\d{1,3}$/;
 const IPv6RE = /^[\da-fA-F]{1,4}$/;
 function isIPv4(queryIP) {

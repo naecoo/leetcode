@@ -1,4 +1,3 @@
-
 /**
  * 题目链接：
  * https://leetcode.cn/problems/matchsticks-to-square/submissions/
@@ -32,5 +31,5 @@ function makesquare(matchsticks) {
       edges[i] -= matchsticks[index];
     }
     return false;
-  };
+  }
 }
