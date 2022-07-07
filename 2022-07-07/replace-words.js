@@ -53,3 +53,22 @@ class Trie {
     this.children = new Map();
   }
 }
+
+// 哈希表
+function replaceWords1(dictionary, sentence) {
+  const map = new Map(dictionary);
+  const words = sentence.split(' ');
+
+  for (let i = 0; i < words.length; i++) {
+    for (let j = 1; j <= words[i].length; j++) {
+      // 从最短前缀开始匹配
+      const substr = words[i].substr(0, j);
+      if (map.has(substr)) {
+        words[i] = substr;
+        break;
+      }
+    }
+  }
+
+  return words.join(' ');
+}
