@@ -8,14 +8,7 @@
  */
 function shiftGrid(grid, k) {
   const m = grid.length, n = grid[0].length;
-  const ret = [];
-  for (let i = 0; i < m; i++) {
-    const row = [];
-    for (let j = 0; j < n; j++) {
-      row.push(0);
-    }
-    ret.push(row);
-  }
+  const ret = new Array(m).fill(null).map(() => new Array(n).fill(0));
   for (let i = 0; i < m; i++) {
     for (let j = 0; j < n; j++) {
       const index1 = (i * n + j + k) % (m * n);
