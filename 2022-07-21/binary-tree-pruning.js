@@ -31,11 +31,7 @@ function pruneTree(root) {
     return node.val + leftCount + rightCount;
   }
 
-  dfs(root);
-
-  if (root.val === 0 && !root.left && !root.right) {
-    return null;
-  } else {
-    return root;
-  }
+  const tmp = new TreeNode(0, root);
+  dfs(tmp);
+  return tmp.left;
 };
