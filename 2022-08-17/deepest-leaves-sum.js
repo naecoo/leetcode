@@ -15,28 +15,6 @@
  * @return {number}
  */
 function deepestLeavesSum(root) {
-  // 广度优先搜索
-  let sum = 0;
-  const queue = [];
-  queue.push(root);
-  while (queue.length) {
-    sum = 0;
-    const size = queue.length;
-    for (let i = 0; i < size; i++) {
-      const node = queue.shift();
-      sum += node.val;
-      if (node.left) {
-        queue.push(node.left);
-      }
-      if (node.right) {
-        queue.push(node.right);
-      }
-    }
-  }
-  return sum;
-}
-
-function deepestLeavesSum1(root) {
   // 深度优先搜索
   let sum = 0;
   let level = 0;
@@ -64,7 +42,7 @@ function deepestLeavesSum1(root) {
   return sum;
 }
 
-function deepestLeavesSum2(root) {
+function deepestLeavesSum1(root) {
   // 层序遍历，效率比较低
   const queue = [];
   let sum = 0;
