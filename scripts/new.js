@@ -17,7 +17,9 @@ if (args.length > 0) {
  * 题目链接：
  * https://leetcode.cn/problems/${basename(args[0])}/
  *
- */`;
+ */
+
+`;
   writeFile(resolve(__dirname, '../', dirName, './', jsFile), content, (err) => {
     if (err) {
       console.log(`${jsFile} 文件已经存在`);
